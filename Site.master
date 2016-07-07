@@ -48,7 +48,7 @@
         <div class="navbar navbar-inverse navbar-fixed-top" style ="background-color:#42AFE7;">
             <div class="container">
                 <div class="navbar-header">
-                   <a class="navbar-brand" href="~/Default.aspx">
+                   <a class="navbar-brand" href="Default.aspx">
                          <img class ="navbar-left" alt="touchstone" src="img/touchstone-header.png" style ="width:50%; height:50%;"/>
                    </a> 
                 </div>
@@ -58,15 +58,16 @@
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a runat="server" href="About.aspx">About</a></li>
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
+                                <li><a runat="server" href="~/Account/Register">Sign up</a></li>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
                               
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="Default.aspx">Home</a></li>
                                 <li><a runat="server" href="~/UserPages/introduction.aspx" title="See all courses">All Courses</a></li>
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, User.Identity.Name.ToString!</a></li>
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, User!</a></li>
                                 <li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
